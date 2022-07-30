@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgba(231, 168, 62,0.15);
+}
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image:  linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../icon/peace.jpg);
+    background-position: top;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    height: 15px;
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .fa-solid{
+    display: none;
+}
+nav img{
+    width: 150px;
+}
+.nav-link{
+    flex: 1;
+    text-align: center;
+}
+.nav-link ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-link ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #E7A83E;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-link ul li:hover::after{
+    width: 100%;
+}
+.nav-link ul li a{
+    color: #E7A83E;
+    text-decoration: none;
+    font-size: 15px;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 1;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 14px;
+    font-size: 14px;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.hero-btn:hover{
+    border: 1px solid #E7A83E;
+    background-color: #E7A83E;
+}
+/* chuc nang khi thu man hinh nho lai */
+@media(max-width: 700px){
+    nav{
+    justify-content: end;
+    }
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-link ul li a{
+        display: block;
+        color: #fff;
+    }
+    .nav-link ul li:hover::after{
+        width: 100%;
+        background: #fff;
+    }
+    .nav-link{
+        position: absolute;
+        background: #E7A83E;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa-solid{
+        display: block;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .fa-xmark{
+        color: #fff;
+    }
+    .fa-bars{
+        color: #E7A83E;
+    }
+    nav ul{
+        padding: 10px 33px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .Prize-col{
+        margin-bottom: 5%;
+    }
+    .img{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/* laureates */
+.laureates{
+    margin: auto;
+    padding-top: 100px;
+    width: 95%;
+    height: 180vh;
+    text-align: center;
+    padding: 20px;
+}
+h3{
+    font-size: 36px;
+    font-weight: 600;
+}
+.laureates-row{
+    height: 20%;
+    margin-top: 2%;
+    border-radius: 5px;
+    border: 1px solid black;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    transition: 0.5s;
+}
+.laureates-row:hover{
+    box-shadow: 10px 10px #E7A83E;
+    background-color: #fff;
+}
+.img{
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid black;
+    /* background: url(icon/PierreCurie-potrait.jpg);
+    background-position: top;
+    background-size: cover; */
+}
+.img1{
+    background: url(../icon/Theodore\ Roosevelt.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img2{
+    background: url(../icon/Bertha\ von\ Suttner.webp);
+    background-position: center;
+    background-size: cover;
+}
+.img3{
+    background: url(../icon/Frédéric\ Passy.webp);
+    background-position: center;
+    background-size: cover;
+}
+.img4{
+    background: url(../icon/Fredrik\ Bajer.webp);
+    background-position: center;
+    background-size: cover;
+}
+.img5{
+    background: url(../icon/Elihu\ Root.webp);
+    background-position: center;
+    background-size: cover;
+}
+/* .img img{
+    width: 100%;
+} */
+.intro{
+    padding: 30px 30px;
+    text-align: left;
+    width: 70%;
+}
+.intro h3{
+    margin-top: -15px;
+}
+.hero-btn-bio{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin-top: 30px;
+    border: 1px solid black;
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.hero-btn-bio:hover{
+    border: 1px solid black;
+    background-color: #E7A83E;
+}
+/* cta */
+
+.cta{
+    margin: 300px auto 200px;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(../icon/contact.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    background-color: #E7A83E;
+    text-align: center;
+    padding: 30px 0;
+}
+footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icon .fa{
+    color: #fff;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.fa-heart-o{
+    color: #fff;
+}
